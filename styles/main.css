@@ -36,7 +36,7 @@ h3.head {
 
 h1.middle-head {
   margin:0;
-  font-size: 40px;
+  font-size: 42px;
   font-weight: 400;
   text-align: center;
   padding: 0 17px 17px;
@@ -435,4 +435,74 @@ main .main_interface .main_interface_content .SEF_domain button {
 
 .funding-partners .content .strategic-partners .strat-part-logos > div .img-wrapper img {
   width: 100%;
+}
+
+/* subscription */
+
+.subscription {
+  background-color: #e6e6e6;
+}
+.subscription .content {
+  width: 66%;
+  margin: auto;
+}
+
+.subscription .content .subscribe-but {
+  display: flex;
+  justify-content: center;
+  padding: 17px;
+}
+
+.subscription .content .subscribe-but button{
+  background: #000;
+  color: #fff;
+  line-height: 1.6;
+  padding: 1.4rem 3rem;
+  font-size: 22px;
+  border: none;
+  border-radius: .4rem;
+}
+
+/* footer */
+
+footer {
+  background-color: #000;
+  color: #FFF;
+}
+footer .container {
+  padding: calc(15vmax / 10) 0
+}
+
+footer .content {
+  display: flex;
+}
+
+footer .content .privacy_policy {
+  width: 25%;
+  font-size: 26px;
+}
+
+footer .content .privacy_policy a {
+  text-decoration: underline;
+  color: var(--theme-color);
+}
+
+footer .content .copyright {
+  text-align: center;
+  width: 50%;
+}
+
+footer .content .copyright h2 {
+  margin: 0;
+}
+
+footer .content .social-media {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 22px;
+  width: 25%;
+}
+
+footer .content .social-media > div:not(:last-child){
+  margin-right: 20px;
 }
