@@ -236,42 +236,46 @@ main .main_interface .main_interface_content .SEF_domain button {
   font-weight: 600;
 }
 
-/* promoting section */
+/* promoting and graduates sections (they have the same design) */
 
-.promoting_section .container {
-  padding-top: calc(45vmax / 10);
-  padding-bottom: calc(45vmax / 10);
+.promoting_section, .SEF_graduates  {
+  margin-top: calc(45vmax / 10);
+  margin-bottom: calc(45vmax / 10);
 }
 
-.promoting_section .content {
+.promoting_section .container, .SEF_graduates .container {
+  padding: 0;
+}
+
+.promoting_section .content, .SEF_graduates .content {
   display: flex;
 }
 
-.promoting_section .content > div {
+.promoting_section .content > div, .SEF_graduates .content > div {
   width: 50%;
 }
 
-.promoting_section .content .side_img img {
+.promoting_section .content .side_img img, .SEF_graduates .content .side-img img {
   object-fit: cover;
   width: 100%;
 }
 
-.promoting_section .content .promote_discuss {
+.promoting_section .content .promote_discuss, .SEF_graduates .content .discussion {
   padding: 0 17px;
 }
 
-.promoting_section .content .promote_discuss h1.head{
+.promoting_section .content .promote_discuss h1.head, .SEF_graduates .content .discussion h1.head{
   margin-bottom: 2rem;
   font-size: calc((3 - 1) * 1.2vw + 1rem);
   font-weight: 400;
 }
 
-.promoting_section .content .promote_discuss .explanation {
+.promoting_section .content .promote_discuss .explanation, .SEF_graduates .content .discussion .explain-sec {
   padding: 0 40px;
   font-size: 25px;
 }
 
-.promoting_section .content .promote_discuss .explanation a {
+.promoting_section .content .promote_discuss .explanation a, .SEF_graduates .content .discussion .explain-sec a {
   color: var(--theme-color);
   display: block;
   margin-top: 16px;
@@ -303,3 +307,26 @@ main .main_interface .main_interface_content .SEF_domain button {
   width: 100%;
   object-fit: cover;
 }
+
+/* SEF graduates */
+
+/* .SEF_graduates {
+
+}
+
+.SEF_graduates .content {
+  display: flex;
+}
+
+.SEF_graduates .content > div {
+  width: 50%;
+}
+
+.SEF_graduates .content .discussion h1{
+  margin-bottom: 2rem;
+}
+
+.SEF_graduates .content .side-img img {
+  width: 100%;
+  object-fit: cover;
+} */
