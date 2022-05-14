@@ -32,7 +32,14 @@ h1.head {
 h3.head {
   font-weight: 400;
   font-size: calc((3 - 1) * .55vw + 1rem);
+}
 
+h1.middle-head {
+  margin:0;
+  font-size: 40px;
+  font-weight: 400;
+  text-align: center;
+  padding: 0 17px 17px;
 }
 
 p {
@@ -315,6 +322,10 @@ main .main_interface .main_interface_content .SEF_domain button {
 }
 
 /* recruitment partners */
+.rec-partners-net .container {
+  padding-top: calc(10vmax / 10);
+  padding-bottom: calc(10vmax / 10);
+}
 
 .rec-partners-net .content .content-head {
   text-align: center;
@@ -335,5 +346,93 @@ main .main_interface .main_interface_content .SEF_domain button {
 }
 
 .rec-partners-net .content .rec-img-wrapper img {
+  width: 100%;
+}
+
+
+/* testimonials */
+
+.testimonials .container {
+  padding-top: calc(10vmax / 10);
+  padding-bottom: calc(10vmax / 10);
+}
+
+.testimonials .content{
+  display: flex;
+  justify-content: center;
+  width: 66%;
+  margin:0 auto
+} 
+.testimonials .content img{
+  width: 100%;
+}
+
+/* media */
+
+.media {
+  background-color: #e6e6e6;
+}
+.media .content .media-head{
+  text-align: center;
+}
+
+.media .content .media-head .head {
+  font-size: 38px;
+}
+
+.media .content .media-platforms {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.media .content .media-platforms > div {
+  width: calc(100% / 4)
+}
+
+.media .content .media-platforms > div .img-wrapper{
+  padding: 17px;
+}
+
+.media .content .media-platforms > div .img-wrapper img {
+  width: 100%;
+}
+
+/* funding partners */
+
+.funding-partners .content .partners-logos .img-wrapper {
+  padding: 17px;
+}
+
+.funding-partners .content .partners-logos .img-wrapper img{
+  width: 100%;
+}
+
+.funding-partners .content .separator {
+  padding: 17px;
+}
+
+.funding-partners .content .separator hr {
+  line-height: 1.4;
+  background-color: #000;
+}
+
+.funding-partners .content .strategic-partners .heading {
+  padding-top: 17px;
+
+}
+
+.funding-partners .content .strategic-partners .strat-part-logos {
+  display: flex;
+}
+
+.funding-partners .content .strategic-partners .strat-part-logos > div {
+  width: calc(100% / 4);
+}
+
+.funding-partners .content .strategic-partners .strat-part-logos > div .img-wrapper {
+  padding: 17px;
+}
+
+.funding-partners .content .strategic-partners .strat-part-logos > div .img-wrapper img {
   width: 100%;
 }
