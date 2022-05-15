@@ -18,31 +18,72 @@
 </head>
 <body>
   
-  <header>
+  <header id="header">
     <div class="fav_icon">
       <a href="https://sefactory.io/"><img src="assets/SE_Factory/favicon.ico" alt="SE Factory"></a>
     </div>
+
     <div class="header_nav">
-      <ul class="header_nav_list">
-        <li class="home"><a href="https://sefactory.io/">Home</a></li>
-        <li><a href="https://sefactory.io/get-trained">Get Trained</a></li>
-        <li><a href="https://sefactory.io/hire-talent">Hire Talent</a></li>
-        <li><a href="https://sefactory.io/faqs">FAQs</a></li>
-        <li><a href="https://sefactory.io/blog">Blog</a></li>
-        <li><a href="https://sefactory.io/about-us">About Us</a></li>
-        <li><a href="https://sefactory.io/contact">Contact</a></li>
-      </ul>
-      <div class="apply">
-        <button>Apply Now</button>
-        <div class="apply_dropdown">
-          <div class="FSW_app_page"><a href="https://sefactory.io/fsw">Full Stack Web Development</a></div>
-          <div class="FCS_app_page"><a href="https://sefactory.io/fcs">Foundation of Computer Science</a></div>
+      <div class="header_nav_wrapper" id="navWrapper">
+        <ul class="header_nav_list">
+          <li class="home"><a href="https://sefactory.io/">Home</a></li>
+          <li><a href="https://sefactory.io/get-trained">Get Trained</a></li>
+          <li><a href="https://sefactory.io/hire-talent">Hire Talent</a></li>
+          <li><a href="https://sefactory.io/faqs">FAQs</a></li>
+          <li><a href="https://sefactory.io/blog">Blog</a></li>
+          <li><a href="https://sefactory.io/about-us">About Us</a></li>
+          <li><a href="https://sefactory.io/contact">Contact</a></li>
+        </ul>
+        <div class="apply">
+          <button>Apply Now</button>
+          <div class="apply_dropdown">
+            <div class="FSW_app_page"><a href="https://sefactory.io/fsw">Full Stack Web Development</a></div>
+            <div class="FCS_app_page"><a href="https://sefactory.io/fcs">Foundation of Computer Science</a></div>
+          </div>
         </div>
       </div>
+
+      <!-- hamburger navigation -->
+      
+      <div id="hamburger" class="hamburger" onclick="showNav()">
+        <div class="first-line"></div>
+        <div class="second-line"></div>
       </div>
     </div>
-
+    
   </header>
+
+  <div id="mobNavList" class="mob-nav-list">
+    <div class="container">
+      <div class="content">
+        <div class="mob-home">
+          <h1 class="head"><a href="https://sefactory.io/"><strong>Home</strong></a></h1>
+        </div>
+        <div class="mob-get-trained">
+          <h1 class="head"><a href="https://sefactory.io/get-trained"><strong>Get Trained</strong></a></h1>
+        </div>
+        <div class="mob-hire-talent">
+          <h1 class="head"><a href="https://sefactory.io/hire-talent"><strong>Hire Talent</strong></a></h1>
+        </div>
+        <div class="mob-faqs">
+          <h1 class="head"><a href="https://sefactory.io/faqs"><strong>FAQs</strong></a></h1>
+        </div>
+        <div class="mob-blog">
+          <h1 class="head"><a href="https://sefactory.io/blog"><strong>Blog</strong></a></h1>
+        </div>
+        <div class="mob-about-us">
+          <h1 class="head"><a href="https://sefactory.io/about-us"><strong>About Us</strong></a></h1>
+        </div>
+        <div class="mob-contact">
+          <h1 class="head"><a href="https://sefactory.io/contact"><strong>Contact</strong></a></h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- mobile navigation list -->
+  
+  
 
   <main>
 
@@ -66,19 +107,21 @@
 
     <div class="statistics">
       <div class="container">
-        <div class="emp_succ_rate">
-          <h1>90%</h1>
-          <p>Employment Success Rate<br>&#8212;</p>
-        </div>
-  
-        <div class="bootcamp_start">
-          <h1>500+</h1>
-          <p>Youth Trained Since 2016<br>&#8212;</p>
-        </div>
-  
-        <div class="rec_partners">
-          <h1>145+</h1>
-          <p>Global Recruitment Partner Companies<br>&#8212;</p>
+        <div class="content">
+          <div class="emp_succ_rate">
+            <h1>90%</h1>
+            <p>Employment Success Rate<br>&#8212;</p>
+          </div>
+    
+          <div class="bootcamp_start">
+            <h1>500+</h1>
+            <p>Youth Trained Since 2016<br>&#8212;</p>
+          </div>
+    
+          <div class="rec_partners">
+            <h1>145+</h1>
+            <p>Global Recruitment Partner Companies<br>&#8212;</p>
+          </div>
         </div>
       </div>
     </div>
@@ -340,6 +383,30 @@
       </div>
     </div>
   </footer>
+  <script>
+    var mobNavList = document.getElementById("mobNavList"),
+        header = document.getElementById("header"),
+        hamburger = document.getElementById('hamburger')
 
+    function showNav() {
+      if (!hamburger.classList.contains("dark")) {
+        mobNavList.style.display = "block";
+        header.style.position = "fixed";
+        header.style.backgroundColor = "#FFF"
+        hamburger.classList.toggle("dark")
+      }
+
+      else {
+        mobNavList.style.display = "none";
+        header.style.position = "absolute";
+        header.style.backgroundColor = "transparent"
+        hamburger.classList.toggle("dark")
+      }
+
+      // header.style.left = "7vw";
+
+
+    }
+  </script>
 </body>
 </html>

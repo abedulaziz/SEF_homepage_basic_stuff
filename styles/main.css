@@ -61,16 +61,18 @@ header {
   left: 0;
   width: 100%;
   display: flex;
-  height: 100px;
+  min-height: 100px;
   z-index: 9;
   padding: 1vw 7vw;
   background-color: transparent;
   color: #FFF;
   justify-content: end;
+  z-index: 999;
 }
 
 header .fav_icon {
   margin-right: auto;
+  position: relative;
 }
 
 header .fav_icon a {
@@ -86,6 +88,11 @@ header .fav_icon a img {
 }
 
 header .header_nav {
+  display: flex;
+  align-items: center;
+}
+
+header .header_nav .header_nav_wrapper {
   display: flex;
   align-items: center;
 }
@@ -155,6 +162,66 @@ header .header_nav .apply .apply_dropdown a {
   color: #000;
 }
 
+header .header_nav .hamburger {
+  width: 43px;
+  height: 37px;
+  position: relative;
+  padding: 4px 1px;
+  display: none;
+  align-items: center;
+  cursor: pointer;
+}
+
+header .header_nav .hamburger div {
+  position: absolute;
+  background-color: #FFF;
+  height: 1.5px;
+  left: 2px;
+  width: calc(100% - 4px);
+  border-radius: 2px;
+}
+
+header .header_nav .hamburger.dark div {
+  background-color: #000;
+}
+
+header .header_nav .hamburger .first-line {
+  top: 30%;
+}
+
+header .header_nav .hamburger .second-line {
+  bottom: 30%;
+}
+
+/* mobile navigation list */
+
+.mob-nav-list {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #FFF;
+  z-index: 9;
+  padding-top:200px;
+  overflow: auto;
+  text-align: center;
+  display: none;
+}
+
+.mob-nav-list .content > div {
+  padding: 25px;
+}
+
+.mob-nav-list .content > div .head {
+  font-size: 3rem;
+}
+
+.mob-nav-list .content > div .head a{
+  color: #000;
+}
+
 
 main .main_interface{
   top: 0;
@@ -185,7 +252,6 @@ main .main_interface .backgr_img_overlay {
 main .main_interface .main_interface_content {
   padding: 100px 7vw 7vw;
   height: 100%;
-  z-index: 99;
   width: 60%;
 }
 
@@ -218,33 +284,32 @@ main .main_interface .main_interface_content .SEF_domain button {
   color: #FFF;
 }
 
-.statistics {
-  padding: 3.3vmax 0
-}
+/* statistics section */
 
-.statistics .container{
+.statistics .content{
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
-.statistics .container > div {
+.statistics .content > div {
   text-align: center;
   width: calc(100% / 3);
   padding: 0 5%;
 }
 
-.statistics .container > div:nth-child(2) {
+/* .statistics .container > div:nth-child(2) {
   flex-grow: 3;
-}
+} */
 
-.statistics .container > div h1{
+.statistics .content > div h1{
   color: var(--theme-color);
   font-weight: 900;
   font-size: calc((3.5 - 1) * 1.2vw + 1rem);
   margin-bottom: 32px;
 } 
 
-.statistics .container > div p {
+.statistics .content > div p {
   font-size: 25px;
   font-weight: 600;
 }
@@ -262,6 +327,7 @@ main .main_interface .main_interface_content .SEF_domain button {
 
 .promoting_section .content, .SEF_graduates .content {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .promoting_section .content > div, .SEF_graduates .content > div {
@@ -309,11 +375,16 @@ main .main_interface .main_interface_content .SEF_domain button {
 .programs .content .bootcamps {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .programs .content .bootcamps > div {
   width: 30%;
   margin: 17px;
+}
+
+.programs .content .bootcamps > div a {
+  display: inline-block;
 }
 
 .programs .content .bootcamps > div img {
@@ -423,6 +494,7 @@ main .main_interface .main_interface_content .SEF_domain button {
 
 .funding-partners .content .strategic-partners .strat-part-logos {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .funding-partners .content .strategic-partners .strat-part-logos > div {
@@ -475,6 +547,7 @@ footer .container {
 
 footer .content {
   display: flex;
+  flex-wrap: wrap;
 }
 
 footer .content .privacy_policy {
@@ -505,4 +578,73 @@ footer .content .social-media {
 
 footer .content .social-media > div:not(:last-child){
   margin-right: 20px;
+}
+
+
+/* media queries */
+
+@media (max-width: 924px) {
+  header {
+    padding: 7vw;
+  }
+
+  header .header_nav .header_nav_wrapper{
+    display: none;
+  }
+  header .header_nav .hamburger {
+    display: flex;
+  }
+
+  .header_nav .header_nav_wrapper > * {
+    background-color: #000;
+  }
+}
+
+@media (max-width: 767px) {
+
+  .main_interface .main_interface_content {
+    width: 80% !important;
+  }
+
+  .statistics .content > div {
+    width: 100%;
+  }
+
+  .promoting_section .content > div, .SEF_graduates .content >div {
+    width: 100%;
+  }
+  .promoting_section .content .side_img, .SEF_graduates .content .side-img {
+    margin-bottom: 20px;
+  }
+
+  .programs .content .bootcamps > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .rec-partners-net .content .content-head .head {
+    width: 100%;
+  }
+
+  .testimonials .content {
+    width: 100%;
+  }
+
+  .media .content .media-platforms > div {
+    width: calc(100% / 2);
+  }
+
+  .funding-partners .content .strategic-partners .strat-part-logos > div {
+    width: 100%;
+  }
+
+  .subscription .content {
+    width: 100%;
+  }
+  
+  footer .content > div {
+    width: 100% !important;
+    padding: 17px;
+  }
 }
